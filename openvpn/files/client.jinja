@@ -33,3 +33,8 @@ http-proxy {{ config.http_proxy }}
 {%- if config.auth_user_pass is defined %}
 auth-user-pass {{ config.auth_user_pass }}
 {%- endif %}
+
+{%- if config.float is defined %}
+# Allow  remote  peer to change its IP address and/or port number
+float
+{%- endif %}
