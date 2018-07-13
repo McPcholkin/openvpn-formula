@@ -40,6 +40,11 @@ Manages TAP-Windows device adapters (Windows only). Ensures that any devices spe
 
 Installs and configures an ifconfig_pool_persist file. Used to assign host IPs.
 
+``openvpn.ccd``
+---------------------------------
+
+Installs and configures an client config dir files. Used to add routes.
+
 Example
 =======
 
