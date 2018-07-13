@@ -8,10 +8,7 @@ openvpn_config_ifconfig_pool_persist_{{ filename }}:
     - source: salt://openvpn/files/ifconfig_pool_persist.jinja
     - template: jinja
     - context:
-        name: filename
         config: {{ config }}
-        user: {{ map.user }}
-        group: {{ map.group }}
     - watch_in:
 {% if salt['grains.has_value']('systemd') %}
 {% for type, names in salt['pillar.get']('openvpn', {}).items() %}

@@ -130,6 +130,7 @@ openvpn:
     mysitetosite1:
       dev: tun
       ifconfig: '10.8.0.1 10.8.0.2'
+      client_config_dir: ccd
       secret: /path/to/mysecret.key
       # or
       #secret: /path/to/mysecret.key 0
@@ -265,6 +266,11 @@ openvpn:
       somehostname: 192.168.51.2
       secondhost: 192.168.51.3
 
+  client_config_dir:
+    somehostname: |
+      iroute 192.168.1.0 255.255.255.0
+    secondhost: |
+      iroute 192.168.2.0 255.255.255.0
   # See GUI config options https://github.com/OpenVPN/openvpn-gui
   gui:
     disable_save_passwords: 1
